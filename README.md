@@ -1,2 +1,2 @@
 # JuniorCodeos
-Youtube
+Мы в Telegram - https://t.me/juniorcodeos
