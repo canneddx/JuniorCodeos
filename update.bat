@@ -31,6 +31,3 @@ rd /s /q "%TEMP_DIR%" >nul
 
 echo Restarting the program...
 start "" "%TARGET_DIR%\%EXECUTABLE%"
-
-echo Update completed.
-pause
