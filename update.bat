@@ -12,7 +12,7 @@ taskkill /f /im "%EXECUTABLE%" >nul 2>&1
 if not exist "%TEMP_DIR%" mkdir "%TEMP_DIR%"
 
 :: Загружаем ZIP-архив репозитория
-echo Загрузка файлов из GitHub...
+GitHub...
 curl -L "%REPO_URL%" -o "%TEMP_DIR%\repo.zip" || (
     echo Ошибка загрузки файлов. Убедитесь, что у вас есть доступ к интернету.
     exit /b 1
@@ -37,5 +37,3 @@ rd /s /q "%TEMP_DIR%"
 echo Перезапуск программы...
 start "" "%TARGET_DIR%\%EXECUTABLE%"
 
-echo Обновление завершено.
-pause
