@@ -1,0 +1,13 @@
+start /realtime "JuniorCodeos: YouTube" "%~dp0winws.exe" ^
+--wf-tcp=443 --wf-udp=443,50000-65535 ^
+--filter-udp=443 --filter-tcp=443 ^
+--hostlist="%~dp0domeins\russia-youtube.txt" ^
+--dpi-desync=fake,split2 ^
+--dpi-desync-repeats=20 ^
+--dpi-desync-udplen-increment=50 ^
+--dpi-desync-udplen-pattern=0xDEADBEEF ^
+--dpi-desync-fake-quic="%~dp0bin\quic_initial_www_youtube_com.bin" ^
+--dpi-desync-fake-tls="%~dp0bin\tls_clienthello_www_youtube_com.bin" ^
+--dpi-desync-autottl=30 ^
+--dpi-desync-fooling=md5sig ^
+--new
